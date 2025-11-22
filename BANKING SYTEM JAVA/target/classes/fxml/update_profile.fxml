@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.bank.controller.UpdateProfileController"
+            style="-fx-background-color: linear-gradient(to bottom right, #0b2e20, #072617);">
+
+    <children>
+        <VBox alignment="CENTER" spacing="25"
+              prefWidth="900" prefHeight="600"
+              AnchorPane.topAnchor="0"
+              AnchorPane.bottomAnchor="0"
+              AnchorPane.leftAnchor="0"
+              AnchorPane.rightAnchor="0">
+
+            <VBox spacing="18" maxWidth="430"
+                  style="-fx-background-color: white;
+                         -fx-padding: 30;
+                         -fx-background-radius: 14;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.20), 12, 0, 0, 3);">
+
+                <!-- TITLE -->
+                <Label text="Update Profile"
+                       style="-fx-font-size: 26px;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #0d2c1d;" />
+
+                <Label text="Update your personal information and password."
+                       wrapText="true"
+                       style="-fx-font-size: 14px; -fx-text-fill: #444;" />
+
+                <!-- FORM FIELDS -->
+                <VBox spacing="12">
+
+                    <TextField fx:id="fullNameField"
+                               promptText="Full Name"
+                               style="-fx-background-radius: 6;" />
+
+                    <TextField fx:id="emailField"
+                               promptText="Email"
+                               style="-fx-background-radius: 6;" />
+
+                    <PasswordField fx:id="oldPasswordField"
+                                   promptText="Current Password"
+                                   style="-fx-background-radius: 6;" />
+
+                    <PasswordField fx:id="newPasswordField"
+                                   promptText="New Password"
+                                   style="-fx-background-radius: 6;" />
+
+                </VBox>
+
+                <!-- ERROR LABEL (Optional) -->
+                <Label fx:id="errorLabel"
+                       textFill="red"
+                       wrapText="true"
+                       visible="false"
+                       style="-fx-font-size: 12px;" />
+
+                <!-- ACTION BUTTONS -->
+                <HBox spacing="10" alignment="CENTER">
+                    <Button text="Save Changes"
+                            onAction="#handleSave"
+                            style="-fx-background-color: #0d2c1d;
+                                   -fx-text-fill: white;
+                                   -fx-font-weight: bold;
+                                   -fx-background-radius: 6;
+                                   -fx-padding: 10 20;" />
+
+                    <Button text="Cancel"
+                            onAction="#handleCancel"
+                            style="-fx-background-color: #c0392b;
+                                   -fx-text-fill: white;
+                                   -fx-background-radius: 6;
+                                   -fx-padding: 10 20;" />
+                </HBox>
+
+            </VBox>
+
+        </VBox>
+    </children>
+
+</AnchorPane>

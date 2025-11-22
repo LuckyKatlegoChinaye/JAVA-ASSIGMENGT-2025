@@ -1,0 +1,3 @@
+- [ ] Move "TH3FATH3R BANKING" label from login card to top of screen in login.fxml
+- [ ] Implement logout functionality in AdminDashboardController.java
+- [ ] Run the application to test admin buttons (logout, refresh, approve/reject customer/account)

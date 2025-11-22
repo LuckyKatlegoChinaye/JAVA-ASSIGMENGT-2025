@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.bank.controller.ManageTransactionsController"
+            prefWidth="800" prefHeight="600"
+            style="-fx-background-color: linear-gradient(to bottom right, #0A2E21, #062114);">
+    <children>
+                <VBox spacing="12" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10"
+                            style="-fx-background-color: linear-gradient(to bottom right, #113C2B, #145237); -fx-padding:18; -fx-background-radius:12; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 10,0,0,4);">
+                        <Label text="Manage Transactions" style="-fx-font-size:20px; -fx-font-weight:bold; -fx-text-fill: white;" />
+
+            <HBox spacing="10">
+                <Label text="Account ID:" style="-fx-text-fill:white;" />
+                <TextField fx:id="filterAccountField" promptText="optional account id" />
+                <Button text="Filter" onAction="#handleFilter" />
+                <Button text="Refresh" onAction="#handleRefresh" />
+                <Region />
+                <Button text="Close" onAction="#handleClose" />
+            </HBox>
+
+            <TableView fx:id="transactionsTable" prefHeight="450" style="-fx-background-color: white; -fx-background-radius:8;">
+                <columns>
+                    <TableColumn text="ID" prefWidth="60" />
+                    <TableColumn text="Date" prefWidth="140" />
+                    <TableColumn text="Account" prefWidth="100" />
+                    <TableColumn text="Type" prefWidth="120" />
+                    <TableColumn text="Amount" prefWidth="120" />
+                    <TableColumn text="Description" prefWidth="240" />
+                </columns>
+            </TableView>
+
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button fx:id="deleteButton" text="Delete Selected" onAction="#handleDelete" style="-fx-background-color:#c0392b; -fx-text-fill:white;" />
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

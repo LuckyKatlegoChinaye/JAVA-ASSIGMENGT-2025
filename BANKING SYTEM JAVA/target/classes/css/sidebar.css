@@ -1,0 +1,21 @@
+/* Sidebar button styles used across dashboards */
+.side-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 8 20;
+    -fx-background-radius: 6;
+}
+.side-btn:hover {
+    -fx-background-color: rgba(255,255,255,0.04);
+}
+
+/* Example active state */
+.side-btn:selected, .side-btn:focused {
+    -fx-background-color: rgba(255,255,255,0.06);
+}
+
+/* Small adjustments for sidebar container */
+.sidebar-container {
+    -fx-background-color: transparent;
+}

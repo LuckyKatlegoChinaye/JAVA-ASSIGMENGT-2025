@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.bank.controller.LoginController"
+            style="-fx-background-color: linear-gradient(to bottom right, #0A2E21, #062114);">
+
+    <children>
+        <VBox alignment="CENTER" spacing="28"
+              prefWidth="900" prefHeight="600"
+              AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+              AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+            <!-- APP TITLE -->
+            <Label text="TH3FATH3R BANKING"
+                   style="-fx-font-size: 34px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #f1c40f;
+                          -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 12,0,0,3);" />
+
+              <!-- LOGIN CARD -->
+              <VBox spacing="18" maxWidth="560" alignment="CENTER"
+                     style="-fx-background-color: white;
+                             -fx-padding: 36 40;
+                             -fx-background-radius: 14;
+                             -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.20), 14, 0, 0, 5);">
+
+                <Label text="Login"
+                       style="-fx-font-size: 22px;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #2a3e4c;" />
+
+                <TextField fx:id="usernameField"
+                           promptText="Username"
+                           prefWidth="480"
+                           style="-fx-padding: 12;
+                                  -fx-background-radius: 8;
+                                  -fx-font-size: 14px;" />
+
+                <PasswordField fx:id="passwordField"
+                               promptText="Password"
+                               prefWidth="480"
+                               style="-fx-padding: 12;
+                                      -fx-background-radius: 8;
+                                      -fx-font-size: 14px;" />
+
+                <Label fx:id="errorLabel" textFill="red" wrapText="true"
+                       style="-fx-font-size: 12px;"/>
+
+              <Button text="Login"
+                     onAction="#handleLogin"
+                     prefWidth="480"
+                     style="-fx-background-color: #0d2c1d;
+                            -fx-text-fill: white;
+                            -fx-font-weight: bold;
+                            -fx-background-radius: 8;
+                            -fx-padding: 12 0;
+                            -fx-font-size: 16px;" />
+
+                <Hyperlink text="Register for Account"
+                           onAction="#handleRegisterRedirect"
+                           style="-fx-text-fill: #0d2c1d;
+                                  -fx-font-size: 13px;" />
+
+            </VBox>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.bank.controller.RegisterController"
+            style="-fx-background-color: linear-gradient(to bottom right, #0A2E21, #062114);">
+
+    <children>
+
+        <VBox alignment="CENTER" prefWidth="900" prefHeight="600" spacing="20">
+
+            <VBox spacing="18" maxWidth="430"
+                  style="-fx-background-color: white;
+                         -fx-padding: 30;
+                         -fx-background-radius: 12;
+                         -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 10, 0, 0, 2);">
+
+                <!-- HEADER -->
+                <Label text="Create Account"
+                       style="-fx-font-size: 26px;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #0d2c1d;"/>
+
+                <Label wrapText="true"
+                       text="Fill in the form below to create your banking profile."
+                       style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+
+                <!-- INPUT SECTION -->
+                <VBox spacing="12">
+
+                    <TextField fx:id="fullNameField"
+                               promptText="Full Name"
+                               style="-fx-background-radius: 6;"/>
+
+                    <TextField fx:id="usernameField"
+                               promptText="Username"
+                               style="-fx-background-radius: 6;"/>
+
+                    <PasswordField fx:id="passwordField"
+                                   promptText="Password"
+                                   style="-fx-background-radius: 6;"/>
+
+                    <PasswordField fx:id="confirmPasswordField"
+                                   promptText="Confirm Password"
+                                   style="-fx-background-radius: 6;"/>
+
+                    <TextField fx:id="emailField"
+                               promptText="Email"
+                               style="-fx-background-radius: 6;"/>
+
+                    <Label text="Account Type"
+                           style="-fx-font-weight: bold; -fx-padding: 4 0 0 0;"/>
+
+                    <ComboBox fx:id="accountTypeBox"
+                              promptText="Select account type"
+                              style="-fx-background-radius: 6;"/>
+                </VBox>
+
+                <!-- ERROR LABEL -->
+                <Label fx:id="errorLabel"
+                       textFill="red"
+                       wrapText="true"
+                       visible="false"
+                       style="-fx-font-size: 12px;"/>
+
+                <!-- BUTTON -->
+                <Button text="Register"
+                        onAction="#handleRegister"
+                        style="-fx-background-color: #0d2c1d;
+                               -fx-text-fill: white;
+                               -fx-font-weight: bold;
+                               -fx-background-radius: 6;
+                               -fx-pref-width: 140;
+                               -fx-padding: 10 20;"/>
+
+                <!-- LOGIN LINK -->
+                <Hyperlink text="Already have an account? Login"
+                           onAction="#handleLoginRedirect"
+                           style="-fx-text-fill: #0d2c1d; -fx-font-size: 12px;"/>
+
+            </VBox>
+
+        </VBox>
+
+    </children>
+</AnchorPane>
